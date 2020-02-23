@@ -9,6 +9,16 @@ The tracker retrieves ticket statuses from ServiceNow with [REST API](https://do
 
 This app can be run completely using `Docker` and `docker-compose`. **Using Docker is recommended, as it guarantees the application is run using compatible versions of Python and Node**.
 
+Create the environment database file:
+```bash
+touch dev.db
+```
+or
+```bash
+touch prod.db
+```
+
+
 There are three main services:
 
 To run the development version of the app
