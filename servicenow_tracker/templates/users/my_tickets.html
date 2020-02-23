@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                My Tickets
+            </h3>
+            <table class="table">
+                <col width="20">
+                <col width="150">
+                <col width="50">
+                <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Latest Comment
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            RITM000001
+                        </td>
+                        <td>
+                            <div class="track">
+                                <div class="step active">
+                                    <span class="icon">
+                                        <i class="fa fa-handshake"></i>
+                                    </span>
+                                    <span class="text">Approved</span>
+                                </div>
+                                <div class="step active">
+                                    <span class="icon">
+                                        <i class="fa fa-list-ol"></i>
+                                    </span>
+                                    <span class="text">Backlog</span>
+                                </div>
+                                <div class="step active">
+                                    <span class="icon">
+                                        <i class="fa fa-hammer"></i>
+                                    </span>
+                                    <span class="text">In Development</span>
+                                </div>
+                                <div class="step active">
+                                    <span class="icon">
+                                        <i class="fa fa-vial"></i>
+                                    </span>
+                                    <span class="text">Testing</span>
+                                </div>
+                                <div class="step active">
+                                    <span class="icon">
+                                        <i class="fas fa-shipping-fast"></i>
+                                    </span>
+                                    <span class="text">Release Scheduled</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Release scheduled for next week
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            RITM000002
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar w-5">
+                                    Pending Approval
+                                </div>
+                                <div class="progress-bar w-15">
+                                    Backlog
+                                </div>
+                                <div class="progress-bar w-50">
+                                    In Development
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            We're converting the data into the new databsae now
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            RITM000003
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar w-5">
+                                    Pending Approval
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            We met today to discuss requirements
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            RITM000003
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar w-100 bg-success">
+                                    Done
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feature released yesterday
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>
+                Create Ticket
+            </h3>
+            <form role="form">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" /> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """User forms."""
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField
+from wtforms import PasswordField, StringField, TextAreaField
 from wtforms.validators import DataRequired, Email, EqualTo, Length
 
 from .models import User
@@ -41,5 +41,25 @@ class RegisterForm(FlaskForm):
         user = User.query.filter_by(email=self.email.data).first()
         if user:
             self.email.errors.append("Email already registered")
+            return False
+        return True
+
+
+class TicketForm(FlaskForm):
+    """Ticket form."""
+
+    description = StringField("Description", validators=[DataRequired()])
+    details = TextAreaField("Details", validators=[DataRequired()])
+
+    def __init__(self, *args, **kwargs):
+        """Create instance."""
+        super(TicketForm, self).__init__(*args, **kwargs)
+        self.description = None
+        self.details = None
+
+    def validate(self):
+        """Validate the form."""
+        initial_validation = super(TicketForm, self).validate()
+        if not initial_validation:
             return False
         return True
