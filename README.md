@@ -2,6 +2,8 @@
 
 A work request visual tracker for IT teams, inspired by Domino's Pizza Tracker
 
+![](tracker_screenshot.png)
+
 ## About the Tracker
 The tracker retrieves ticket statuses from ServiceNow with [REST API](https://docs.servicenow.com/bundle/geneva-servicenow-platform/page/integrate/inbound_rest/task/t_GetStartedRetrieveExisting.html) calls. These tickets can be of any type the user opened or is assigned. There is also a global ticket search feature.
 
